@@ -1,24 +1,10 @@
 import { Key, ReactChild, ReactFragment, ReactPortal } from "react";
 import { Link, useLoaderData } from "remix";
+import { getPosts,Post } from "~/post";
 export const loader = () => {
-  return [
-    {
-      id: 1,
-      slug: "hello-world",
-      title: "Hello World Remix from midudev",
-    },
-    {
-      id: 2,
-      slug: "hello-world 1",
-      title: "Hello World Remix from midudev 1",
-    },
-  ];
+  return getPosts();
 };
-type Post = {
-  id: number;
-  slug: string;
-  title: number;
-};
+
 export default function Posts() {
   const posts = useLoaderData<Post[]>();
   return (
