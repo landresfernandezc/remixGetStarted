@@ -12,7 +12,7 @@ export default function Posts() {
       <h1>Posts</h1>
       {posts.map((post) => {
         return (
-          <div key={post.id}>
+          <div >
             <Link to={`/posts/${post.slug}`}>
               <h3>{post.title}</h3>
             </Link>

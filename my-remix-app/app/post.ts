@@ -10,7 +10,7 @@ export type Post = {
     title: string;
     content:string;
 };
-export type newPost = {
+type newPost = {
     slug: string;
     title: string;
     content:string;
